@@ -1,0 +1,58 @@
+:root{
+    --rosa:#3a0b2d;
+    --rosaclaro:#fa8dd6;
+}
+body{
+    margin: 0;
+    background: var(--rosaclaro);
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+button{
+    background-color: var(--rosa);
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    padding: 0;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, .5);
+}
+#buttonHeader{
+    height: 23px;
+    width: 65px;
+    margin-top: 3px;
+}
+#texto{
+    margin-top: 5px;
+    margin-right: 30%;
+}
+#imgCabelo{
+    height: 484px;
+    margin-left: 20px;
+    position: absolute;
+}
+.Header{
+    background: var(--rosa);
+    display: flex;
+    height: 30px;
+    justify-content: flex-end;
+}
+.bodyScreen{
+    margin-top: 40px;
+}
+.bodyTop{
+    display: flex;
+}
+.bodyTopImg{
+}
+#desperte{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 400px;
+    font-size: 54px;
+    font-family: Tahoma;
+    color: #5f1348 
+}
