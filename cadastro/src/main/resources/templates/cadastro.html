@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/page2.css">
+    <title>Cadastro</title>
+</head>
+<body>
+	<div class="full-screen">
+		<div class="rightScreenInputs">
+			<button id="voltarHome" type="button">voltar</button>
+			<form action="POST">
+				<input placeholder="Nome" name="nome"/><br>
+				<input placeholder="telefone" name="telefone" id="telefone"/><br>
+				<input placeholder="Data Nascimento" name="dataNascimento" id="nasc"/><br>
+				<input placeholder="Gênero" name="genero"/><br>
+				<button id="botaoCadastro" type="submit">Cadastrar Cliente</button><br>
+				<button id="botaoCadastro" type="submit">Ver clientes cadastrados</button>
+			</form>
+		</div>
+		<div class="leftScreenPhoto">
+			<p>aqui vai o iputa da foto</p>
+			<button id="anexarFoto" type="submit">Anexar foto</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$("#telefone, #celular").mask("(00) 0000-0000");
+		</script>
+			
+</body>
+</html>

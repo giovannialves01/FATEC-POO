@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" th:href="@{/page1.css}"/>
     <title>WB - Grupo World Beauty</title>
 </head>
 <body>
@@ -13,32 +13,32 @@
         <div class="Header">
             <i class="iconWB"></i>
             <p id="texto">Grupo World Beauty é tudo de bom minha linda</p>
-            <button id="buttonHeader" type="button" class="buttonHamburguer"></button>
+            <a th:href="@{/cadastrar-clientes}">cadastrar</a>
         </div>
         <div class="bodyScreen">
             <div class="bodyTop">
                 <div class="choosebuttons">
                     <div class="button1">
                         <i class="iconPe"></i>
-                        <button type="button" id="buttonPe"></button>
+                        <button type="button" id="buttonPe">Pés</button>
                     </div>
                     <div class="button2">
                         <i class="iconMao"></i>
-                        <button type="button" id="buttonMao"></button>
+                        <button type="button" id="buttonMao">Mãos</button>
                     </div>
                     <div class="button3">
                         <i class="iconSobrancelha"></i>
-                        <button type="button" id="buttonSobrancelha"></button>
+                        <button type="button" id="buttonSobrancelha">Sobrancelhas</button>
                     </div>
                     <div class="button4">
                         <i class="iconCabelo"></i>
-                        <button type="button" id="buttonCabelo"></button>
+                        <button type="button" id="buttonCabelo">Cabelos</button>
                     </div>
                     
                 </div>
 
                 <div class="bodyTopImg">
-                    <img id="imgCabelo" src="../static/img/people-2561845_1920.jpg" alt="image of something">
+                    <img id="imgCabelo" th:src="@{/img/people-2561845_1920.jpg}" alt="image of something">
                     <p id="desperte">Desperte a sua beleza anterior</p>
                 </div>
                 

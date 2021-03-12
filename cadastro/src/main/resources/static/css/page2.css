@@ -1,0 +1,48 @@
+:root{
+    --rosa:#3a0b2d;
+    --rosaclaro:#fa8dd6;
+}
+body{
+    margin: 0;
+    background: var(--rosaclaro);
+    box-sizing: border-box;
+}
+
+#botaoCadastro{
+    outline: transparent;
+    background-color: var(--rosa);
+    width: 150px;
+    height: 50px;
+    margin: 0 0 30px 70px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px 0 10px 0;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    
+
+}
+button:hover{
+    background-color: rgba(255, 255, 255, .5);
+}
+.full-screen{
+    display: flex;
+}
+
+input{
+    margin: 45px 30px 20px 70px;
+}
+.leftScreenPhoto{
+    margin: 20px 0 0 20px;
+    height: 300px;
+    width: 200px;
+    border-style: dashed;
+    border-color: #3a0b2d;
+}
+p{
+    margin-bottom: 275px;
+}
+#anexarFoto{
+    margin-left:55px;
+}
