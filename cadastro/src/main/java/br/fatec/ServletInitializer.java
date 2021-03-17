@@ -1,4 +1,4 @@
-package br.fatec.cadastro;
+package br.fatec;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

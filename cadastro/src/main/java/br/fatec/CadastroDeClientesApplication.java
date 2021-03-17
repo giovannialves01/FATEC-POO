@@ -1,10 +1,9 @@
-package br.fatec.cadastro;
+package br.fatec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages= {"br.fatec.controller"})
+
 @SpringBootApplication
 public class CadastroDeClientesApplication {
 
