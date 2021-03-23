@@ -15,7 +15,7 @@
 			<form th:action="@{/cadastrar-clientes}" method="POST" >
 				<input placeholder="Nome" name="nome"/><br>
 				<input type="text" placeholder="telefone" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"/><br>
-				<input placeholder="Data Nascimento" name="dataNasc" id="nasc"/><br>
+				<input placeholder="Data Nascimento" name="dataNasc" id="nasc"maxlength="10" onkeypress="mascaraData(this)"/><br>
 				<select name="genero">
 					<option>Mascfelino</option>
   					<option>Femasc</option>
