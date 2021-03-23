@@ -15,16 +15,13 @@ public class Cliente {
 	
 	@Column(nullable = false)
 	private String nome;
+	@Column(nullable = false)
 	private String telefone;
+	@Column(nullable = false)
 	private String dataNasc;
+	@Column(nullable = false)
 	private String genero;
 	
-	public Cliente(String nome, String telefone, String dataNasc, String genero) {
-		this.nome = nome;
-		this.telefone = telefone;
-		this.dataNasc = dataNasc;
-		this.genero = genero;
-	}
 
 	public String getNome() {
 		return nome;

@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../static/css/page2.css">
+	<link rel="stylesheet" th:href="@{/css/page2.css}">
     <title>Cadastro</title>
 </head>
 <body>
 	<div class="full-screen">
 		<div class="rightScreenInputs">
-			<button id="voltarHome" type="button">voltar</button>
-			<form action="POST">
+			<a th:href="@{/}" ><span>Home</span></a>
+			<form th:action="@{/cadastrar-clientes}" method="POST" >
 				<input placeholder="Nome" name="nome"/><br>
-				<input placeholder="telefone" name="telefone" id="telefone"/><br>
-				<input placeholder="Data Nascimento" name="dataNascimento" id="nasc"/><br>
-				<input placeholder="Gênero" name="genero"/><br>
+				<input type="text" placeholder="telefone" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"/><br>
+				<input placeholder="Data Nascimento" name="dataNasc" id="nasc"/><br>
+				<select name="genero">
+					<option>Mascfelino</option>
+  					<option>Femasc</option>
+				</select><br>
 				<button id="botaoCadastro" type="submit">Cadastrar Cliente</button><br>
-				<button id="botaoCadastro" type="submit">Ver clientes cadastrados</button>
 			</form>
+		<a th:href="@{/listar-clientes}" ><span>Listar Clientes</span></a>
 		</div>
 		<div class="leftScreenPhoto">
 			<p>aqui vai o iputa da foto</p>
@@ -27,9 +30,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		$("#telefone, #celular").mask("(00) 0000-0000");
-		</script>
+	<script type="text/javascript" th:src="@{/js/script.js}"></script>	
 			
 </body>
 </html>
