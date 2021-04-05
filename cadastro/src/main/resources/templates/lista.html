@@ -20,17 +20,35 @@
 			            <th id="tableGenero" scope="col">Tel</th>
 			            <th id="tableNumPagina" scope="col">data de nascimento</th>
 			            <th id="tableAutor" scope="col">genero</th>
+			            <th id="tableAutor" scope="col">imagem</th>
+			            <th id="tableAutor" scope="col">quant.pe</th>
+			            <th id="tableAutor" scope="col">quant.mao</th>
+			            <th id="tableAutor" scope="col">quant.somb</th>
+			            <th id="tableAutor" scope="col">quant.cabelos</th>
 			        </tr>
 	        	</thead>
 	            	<tr th:each="cliente:${clientes}">
-			            <td><span th:text="${cliente.nome}">Nome</span></td>
-			            <td><span th:text="${cliente.telefone}">Gêneros</span></td>
-			            <td> <span th:text="${cliente.dataNasc}">Numero de páginas</span></td>
-			            <td><span th:text="${cliente.genero}">Autor</span></td>  
+			            <td><span th:text="${cliente.nome}"></span></td>
+			            <td><span th:text="${cliente.telefone}"></span></td>
+			            <td> <span th:text="${cliente.dataNasc}"></span></td>
+			            <td><span th:text="${cliente.genero}"></span></td>
+			            <td><span th:text="${cliente.numPes}"></span></td>
+			            <td><span th:text="${cliente.numMaos}"></span></td>
+			            <td><span th:text="${cliente.numSobrancelhas}"></span></td>
+			            <td><span th:text="${cliente.numCabelos}"></span></td>  
+			            
+			            <td><a class="btn btn-danger" th:href="@{excluir/{id}(id=${cliente.id})}">
+		      
+		      				<i class="fas fa-times"></i>Excluir</a></td>
+					      <td><a class="btn btn-danger" th:href="@{alterar/{id}(id=${cliente.id})}">
+					      
+					      	<i class="fas fa-times"></i>Alterar</a></td>
+			            
 		            </tr>
 				
 			</table>
 		</div>
+		
 		<div class="leftScreenPhoto">
 			
 			

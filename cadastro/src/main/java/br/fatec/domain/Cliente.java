@@ -21,7 +21,64 @@ public class Cliente {
 	private String dataNasc;
 	@Column(nullable = false)
 	private String genero;
+	@Column(nullable = false)
+	private String foto;
+	@Column()
+	private Long numPes;
+	@Column()
+	private Long numMaos;
+	@Column()
+	private Long numSobrancelhas;
+	public Long getNumPes() {
+		return numPes;
+	}
+
+	public void setNumPes(Long numPes) {
+		this.numPes = numPes;
+	}
+
+	public Long getNumMaos() {
+		return numMaos;
+	}
+
+	public void setNumMaos(Long numMaos) {
+		this.numMaos = numMaos;
+	}
+
+	public Long getNumSobrancelhas() {
+		return numSobrancelhas;
+	}
+
+	public void setNumSobrancelhas(Long numSobrancelhas) {
+		this.numSobrancelhas = numSobrancelhas;
+	}
+
+	public Long getNumCabelos() {
+		return numCabelos;
+	}
+
+	public void setNumCabelos(Long numCabelos) {
+		this.numCabelos = numCabelos;
+	}
+
+	@Column()
+	private Long numCabelos;
 	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 
 	public String getNome() {
 		return nome;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/page2.css}">
+    <title>Login</title>
+</head>
+<body>
+	<form action="/login" id="form-1">
+		<label for="input-1">User:</label>
+		<input id="inputUsuario" placeholder="digite seu usuario" type="text" name="username"/>
+		
+		<label for="input-1">Password:</label>
+		<input id="inputSenha" placeholder="digite sau senha" type="password" name="password"/>
+		
+		<input type="submit" value="Submit" id="buttonSubmit"/>
+		<input type="hidden" th:name="${ csrf.parameterName}" th:value="${ csrf.token}"/> <!-- crosssiterequest -->
+	</form>
+
+</body>
+</html>
