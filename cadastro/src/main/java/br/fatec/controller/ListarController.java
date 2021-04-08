@@ -1,15 +1,19 @@
 package br.fatec.controller;
 
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Order;
 
+import br.fatec.domain.Cliente;
 import br.fatec.repository.ClienteRepository;
+
 
 @Controller
 public class ListarController {
@@ -27,5 +31,18 @@ public class ListarController {
 		   return "redirect:/listar-clientes";
 		}
 	
-
+	@GetMapping("/listar-clientes-nome")
+	public ModelAndView todosClientesOrdenadoPorNome() {
+		List<Cliente> clientes = cr.findAll(Sort.by("nome")); // <-- ordenação aqui
+		ModelAndView capsula = new ModelAndView("lista");
+		capsula.addObject("clientes", clientes);
+		return capsula;
+}
+	@GetMapping("/listar-clientes-genero")
+	public ModelAndView todosClientesOrdenadoPorGenero() {
+		List<Cliente> clientes = cr.findAll(Sort.by("genero")); // <-- ordenação aqui
+		ModelAndView capsula = new ModelAndView("lista");
+		capsula.addObject("clientes", clientes);
+		return capsula;
+}
 }
