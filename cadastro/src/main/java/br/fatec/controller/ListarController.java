@@ -1,10 +1,9 @@
 package br.fatec.controller;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,12 +31,10 @@ public class ListarController {
 	@GetMapping("/listar-clientes2")
 	public ModelAndView recuperarTodosClientes() {
 		// busca no banco todo mundo!
-		List<Cliente> clientes = cr.findAll(); 
+		List<Cliente> clientes = cr.findAll(Sort.by("dataNasc")); // <-- ordenação aqui
 		// Cria a capsula que vai levar os dada a view (html)
 		ModelAndView capsula = new ModelAndView("lista");
 		// Coloca os dados dentro da capsula
-		// Ordenando por comparação via codigo
-		Collections.sort(clientes); // <-- faz a ordenação
 		capsula.addObject("clientes", clientes);
 		return capsula;
 	}

@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Cliente implements Comparable<Cliente> {
+public class Cliente {
 
 	@Id()
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -111,13 +111,6 @@ public class Cliente implements Comparable<Cliente> {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
-	}
-
-	@Override
-	public int compareTo(Cliente outro) {
-		String nomeOutro = outro.nome.toLowerCase();
-		String nomeAtual = this.nome.toLowerCase();
-		return nomeAtual.compareTo(nomeOutro);
 	}
 
 }
