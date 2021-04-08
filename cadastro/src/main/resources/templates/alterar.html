@@ -17,7 +17,7 @@
 				<input required="required" placeholder="Nome" name="nome" th:field="${cliente.nome}" /><br>
 				<input required="required" type="text" placeholder="telefone" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" th:field="${cliente.telefone}" /><br>
 				<input required="required" placeholder="Data Nascimento" name="dataNasc" id="nasc"maxlength="10" onkeypress="mascaraData(this)" th:field="${cliente.dataNasc}"/><br>
-				<select name="genero"
+				<select name="genero">
 					<option>Mascfelino</option>
   					<option>Femasc</option>
 				</select><br>

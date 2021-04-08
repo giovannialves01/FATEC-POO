@@ -1,5 +1,8 @@
 package br.fatec.controller;
 
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -26,4 +29,3 @@ public class ListarController {
 	
 
 }
-

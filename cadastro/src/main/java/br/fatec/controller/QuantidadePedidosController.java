@@ -15,7 +15,8 @@ public class QuantidadePedidosController {
 	Cliente c = new Cliente();
 	
 	public void aumentarQuantidadePedidosFeitos(Long id) {
-		cr.findById(id);
+		Cliente c = cr.getOne(id);
+		c.getNumCabelos();
 		return ;
 	}
 }

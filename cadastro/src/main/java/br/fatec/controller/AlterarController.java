@@ -1,17 +1,14 @@
 package br.fatec.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.fatec.domain.Cliente;
 import br.fatec.repository.ClienteRepository;
 
-@Controller
+@RestController
 public class AlterarController {
 	@Autowired
 	private ClienteRepository cr;
@@ -20,22 +17,12 @@ public class AlterarController {
 	
 
 	
-	@RequestMapping(value="/alterar", method= RequestMethod.POST)
-	public String alterar (@PathVariable long id, @RequestBody Cliente c) {
-		
-		cr.findById(id).map(record -> { 
-			record.setId(c.getId());
-			record.setNome(c.getNome());
-			record.setTelefone(c.getTelefone());
-			record.setDataNasc(c.getDataNasc());
-			record.setGenero(c.getGenero());
-			record.setNumPes(c.getNumPes());
-			record.setNumMaos(c.getNumMaos());
-			record.setNumSobrancelhas(c.getNumSobrancelhas());
-			record.setNumCabelos(c.getNumCabelos());
-			Cliente updated = cr.save(record);
-			return ResponseEntity.ok().body(updated);});
-		 return "redirect:/listar-clientes";
+	@PostMapping("/alterar")
+    public ModelAndView alterar(Cliente c) {
+    	ModelAndView mv = new ModelAndView();
+    	cr.save(c);
+    	mv.setViewName("redirect:/listar-clientes");
+		return mv;
 		
 
 }
