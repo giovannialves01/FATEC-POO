@@ -37,6 +37,7 @@ public class ListarController {
 		// Coloca os dados dentro da capsula
 		capsula.addObject("clientes", clientes);
 		return capsula;
+		
 	}
 
 }
