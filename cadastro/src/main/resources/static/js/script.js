@@ -152,8 +152,4 @@ function mascaraData(val) {
 	document.getElementById("cliente.numCabelos").value = contador;
 }
 
-	function mediaIdade(){
-		var idade_clientes = cr.mediaIdade;
-		return console.log(idade_clientes);
-	}
 		

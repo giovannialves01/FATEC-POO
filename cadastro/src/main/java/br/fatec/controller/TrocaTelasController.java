@@ -55,8 +55,25 @@ public class TrocaTelasController {
 		media = gc.get(Calendar.YEAR) - media;
 		mv.addObject("idades", media);
 		}
+		String maisPedido;
+		if(cr.somaMaosMasc() != null) {
+		if(cr.somaMaos() >= cr.somaPes() && cr.somaMaos() >= cr.somaSobrancelhas() && cr.somaMaos() >= cr.somaCabelos()) {
+			maisPedido = "Serviço de manicure";
+		}
+		else if(cr.somaPes() >= cr.somaMaos() && cr.somaPes() >= cr.somaSobrancelhas() && cr.somaPes() >= cr.somaCabelos()) {
+			maisPedido = "Serviço de pedicure";
+		}
+		else if(cr.somaSobrancelhas() >= cr.somaMaos() && cr.somaSobrancelhas() >= cr.somaPes() && cr.somaSobrancelhas() >= cr.somaCabelos()) {
+			maisPedido = "Serviço de sobrancelhas";
+		}
+		else {
+			maisPedido = "Serviço de cabelereiro";
+		}
+		mv.addObject("servicoMaisPedido", maisPedido);
+		}
 		return mv;
-	}
+		}
+	
 	@RequestMapping(method = RequestMethod.GET, path = "/cadastrar-clientes")
 	public String cadastrarClientes() {
 		return "cadastro";

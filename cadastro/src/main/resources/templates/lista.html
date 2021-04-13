@@ -47,7 +47,8 @@
 				
 			</table>
 		</div>
-		<span th:text="${idades}"></span>
+		<span>Idade media do publico filtrado: </span><span th:text="${idades}"></span><br>
+		<span>Produtos mais adquiridos pelo publico filtrado: <span/><span th:text="${servicoMaisPedido}"></span>
 		<div class="leftScreenPhoto">
 			<a th:href="@{/listar-clientes-nome}" ><span>Filtrar por nome</span></a>
 			<a th:href="@{/listar-clientes}" ><span>Todos os clientes</span></a>

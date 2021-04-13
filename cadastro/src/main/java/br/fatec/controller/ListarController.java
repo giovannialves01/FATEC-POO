@@ -63,6 +63,22 @@ public class ListarController {
 			media = gc.get(Calendar.YEAR) - media;
 			capsula.addObject("idades", media);
 		}
+		String maisPedido;
+		if(cr.somaMaosMasc() != null) {
+			if(cr.somaMaosMasc() >= cr.somaPesMasc() && cr.somaMaosMasc() >= cr.somaSobrancelhasMasc() && cr.somaMaosMasc() >= cr.somaCabelosMasc()) {
+				maisPedido = "Serviço de manicure";
+			}
+			else if(cr.somaPesMasc() >= cr.somaMaosMasc() && cr.somaPesMasc() >= cr.somaSobrancelhasMasc() && cr.somaPesMasc() >= cr.somaCabelosMasc()) {
+				maisPedido = "Serviço de pedicure";
+			}
+			else if(cr.somaSobrancelhasMasc() >= cr.somaMaosMasc() && cr.somaSobrancelhasMasc() >= cr.somaPesMasc() && cr.somaSobrancelhasMasc() >= cr.somaCabelosMasc()) {
+				maisPedido = "Serviço de sobrancelhas";
+			}
+			else {
+				maisPedido = "Serviço de cabelereiro";
+			}
+			capsula.addObject("servicoMaisPedido", maisPedido);
+		}
 		return capsula;
 }
 	@GetMapping("/listar-clientes-femininos")
@@ -77,6 +93,25 @@ public class ListarController {
 			media = media/cr.idadesTodosMulheresCadastrados().size();
 			media = gc.get(Calendar.YEAR) - media;
 			capsula.addObject("idades", media);
+		}
+		String maisPedido;
+		if(cr.somaMaosFem() != null) {
+			if(cr.somaMaosFem() == 0 && cr.somaPesFem() == 0 && cr.somaSobrancelhasFem() == 0 && cr.somaCabelosFem() == 0) {
+				maisPedido = "Sem resultados";
+			}
+			if(cr.somaMaosFem() >= cr.somaPesFem() && cr.somaMaosFem() >= cr.somaSobrancelhasFem() && cr.somaMaosFem() >= cr.somaCabelosFem()) {
+				maisPedido = "Serviço de manicure";
+			}
+			else if(cr.somaPesFem() >= cr.somaMaosFem() && cr.somaPesFem() >= cr.somaSobrancelhasFem() && cr.somaPesFem() >= cr.somaCabelosFem()) {
+				maisPedido = "Serviço de pedicure";
+			}
+			else if(cr.somaSobrancelhasFem() >= cr.somaMaosFem() && cr.somaSobrancelhasFem() >= cr.somaPesFem() && cr.somaSobrancelhasFem() >= cr.somaCabelosFem()) {
+				maisPedido = "Serviço de sobrancelhas";
+			}
+			else {
+				maisPedido = "Serviço de cabelereiro";
+			}
+			capsula.addObject("servicoMaisPedido", maisPedido);
 		}
 		return capsula;
 }
