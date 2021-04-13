@@ -20,7 +20,6 @@
 			            <th id="tableGenero" scope="col">Tel</th>
 			            <th id="tableNumPagina" scope="col">data de nascimento</th>
 			            <th id="tableAutor" scope="col">genero</th>
-			            <th id="tableAutor" scope="col">imagem</th>
 			            <th id="tableAutor" scope="col">quant.pe</th>
 			            <th id="tableAutor" scope="col">quant.mao</th>
 			            <th id="tableAutor" scope="col">quant.somb</th>
@@ -30,7 +29,7 @@
 	            	<tr th:each="cliente:${clientes}">
 			            <td><span th:text="${cliente.nome}"></span></td>
 			            <td><span th:text="${cliente.telefone}"></span></td>
-			            <td> <span th:text="${cliente.dataNasc}"></span></td>
+			            <td><span th:utext="${cliente.dataNasc}"></span></td>
 			            <td><span th:text="${cliente.genero}"></span></td>
 			            <td><span th:text="${cliente.numPes}"></span></td>
 			            <td><span th:text="${cliente.numMaos}"></span></td>
@@ -48,10 +47,12 @@
 				
 			</table>
 		</div>
-		
+		<span th:text="${idades}"></span>
 		<div class="leftScreenPhoto">
-			
-			
+			<a th:href="@{/listar-clientes-nome}" ><span>Filtrar por nome</span></a>
+			<a th:href="@{/listar-clientes}" ><span>Todos os clientes</span></a>
+			<a th:href="@{/listar-clientes-masculinos}" ><span>Filtrar por clientes Masculinos</span></a>
+			<a th:href="@{/listar-clientes-femininos}" ><span>Filtrar por clientes Femininos</span></a>
 		</div>
 	</div>
 

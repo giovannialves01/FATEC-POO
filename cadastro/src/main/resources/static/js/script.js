@@ -93,5 +93,67 @@ function mascaraData(val) {
   return true;
 }
 
-function a(){
-	console.log("teste");}
+	function aumentaPe() {		
+		var contador = document.getElementById("cliente.numPes").value;
+		console.log(contador);
+		contador++;
+
+	document.getElementById("cliente.numPes").value = contador;
+}
+	function diminuiPe() {		
+		var contador = document.getElementById("cliente.numPes").value;
+		console.log(contador);
+		contador--;
+
+	document.getElementById("cliente.numPes").value = contador;
+}
+	function aumentaMao() {		
+		var contador = document.getElementById("cliente.numMaos").value;
+		console.log(contador);
+		contador++;
+
+	document.getElementById("cliente.numMaos").value = contador;
+}
+	function diminuiMao() {		
+		var contador = document.getElementById("cliente.numMaos").value;
+		console.log(contador);
+		contador--;
+
+	document.getElementById("cliente.numMaos").value = contador;
+}
+
+	function aumentaSomb() {		
+		var contador = document.getElementById("cliente.numSobrancelhas").value;
+		console.log(contador);
+		contador++;
+
+	document.getElementById("cliente.numSobrancelhas").value = contador;
+}
+	function diminuiSomb() {		
+		var contador = document.getElementById("cliente.numSobrancelhas").value;
+		console.log(contador);
+		contador--;
+
+	document.getElementById("cliente.numSobrancelhas").value = contador;
+}
+
+	function aumentaCabelo() {		
+		var contador = document.getElementById("cliente.numCabelos").value;
+		console.log(contador);
+		contador++;
+
+	document.getElementById("cliente.numCabelos").value = contador;
+}
+	function diminuiCabelo() {		
+		var contador = document.getElementById("cliente.numCabelos").value;
+		console.log(contador);
+		contador--;
+
+	document.getElementById("cliente.numCabelos").value = contador;
+}
+
+	function mediaIdade(){
+		var idade_clientes = cr.mediaIdade;
+		return console.log(idade_clientes);
+	}
+		

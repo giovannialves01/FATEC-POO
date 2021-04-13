@@ -1,5 +1,7 @@
 package br.fatec.controller;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ public class TrocaTelasController {
 	@Autowired
 	private ClienteRepository cr;
 	
+	GregorianCalendar gc = new GregorianCalendar();
 	
 	 @GetMapping("/alterar/{id}")
 	    public ModelAndView alterar (@PathVariable("id") Long id) {
@@ -43,6 +46,15 @@ public class TrocaTelasController {
 		List<Cliente> clientes = cr.findAll();
 		ModelAndView mv = new ModelAndView("lista");
 		mv.addObject("clientes", clientes);
+		Long media = 0L;
+		for (String idade : cr.idadesTodosCadastrados()) {
+			media += Long.valueOf(idade);
+		}
+		if(media != 0) {
+		media = media/cr.idadesTodosCadastrados().size();
+		media = gc.get(Calendar.YEAR) - media;
+		mv.addObject("idades", media);
+		}
 		return mv;
 	}
 	@RequestMapping(method = RequestMethod.GET, path = "/cadastrar-clientes")

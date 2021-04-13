@@ -24,11 +24,15 @@ public class Cliente {
 	@Column(nullable = false)
 	private String foto;
 	@Column()
-	private Long numPes;
+	private Long numPes = 0L;
 	@Column()
-	private Long numMaos;
+	private Long numMaos = 0L;
 	@Column()
-	private Long numSobrancelhas;
+	private Long numSobrancelhas = 0L;
+	@Column()
+	private Long numCabelos = 0L;
+	
+	
 	public Long getNumPes() {
 		return numPes;
 	}
@@ -61,9 +65,6 @@ public class Cliente {
 		this.numCabelos = numCabelos;
 	}
 
-	@Column()
-	private Long numCabelos;
-	
 	public long getId() {
 		return id;
 	}

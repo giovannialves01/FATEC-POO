@@ -17,9 +17,13 @@
 				<input required="required" placeholder="Nome" name="nome" th:field="${cliente.nome}" /><br>
 				<input required="required" type="text" placeholder="telefone" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" th:field="${cliente.telefone}" /><br>
 				<input required="required" placeholder="Data Nascimento" name="dataNasc" id="nasc"maxlength="10" onkeypress="mascaraData(this)" th:field="${cliente.dataNasc}"/><br>
+				<button type="button" id="diminui" onclick="diminuiPe()">-</button><input type="text" id="cliente.numPes" th:field="${cliente.numPes}" name="numPes"><button type="button" id="aumentar" onclick="aumentaPe()">+</button><br>
+				<button type="button" id="diminui" onclick="diminuiMao()">-</button><input type="text" id="cliente.numMaos" th:field="${cliente.numMaos}" name="numPes"><button type="button" id="aumentar" onclick="aumentaMao()">+</button><br>
+				<button type="button" id="diminui" onclick="diminuiSomb()">-</button><input type="text" id="cliente.numSobrancelhas" th:field="${cliente.numSobrancelhas}" name="numPes"><button type="button" id="aumentar" onclick="aumentaSomb()">+</button><br>
+				<button type="button" id="diminui" onclick="diminuiCabelo()">-</button><input type="text" id="cliente.numCabelos" th:field="${cliente.numCabelos}" name="numPes"><button type="button" id="aumentar" onclick="aumentaCabelo()">+</button><br>
 				<select name="genero">
-					<option>Mascfelino</option>
-  					<option>Femasc</option>
+					<option>Masculino</option>
+  					<option>Feminino</option>
 				</select><br>
 				<input type="file" name="foto" accept="image/png, image/jpeg" />
 				<button id="botaoCadastro" type="submit">Alterar dados</button><br>
@@ -31,11 +35,15 @@
     
 
 		    
-</form>
 		</div>
 	</div>
 
 	<script type="text/javascript" th:src="@{/js/script.js}"></script>	
-			
+	<script th:inline="javascript">
+/*<![CDATA[*/
+
+	
+/*]]>*/
+</script>		
 </body>
 </html>
