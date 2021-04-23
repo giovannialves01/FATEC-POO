@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../static/css/page2.css">
+	<link rel="stylesheet" href="/css/page3.css">
     <title>Cadastro</title>
 </head>
 <body>
 	<div class="full-screen">
 		<div class="rightScreenInputs">
-			<a th:href="@{/cadastrar-clientes}" ><span>Voltar</span></a>
+			<a th:href="@{/cadastrar-clientes}" ><span id="esp">Voltar</span></a>
 		
-	        <table>
+	        <table id="table">
 	            <thead>
 			        <tr class="tableHeader">
 			            <th id="tableNome" scope="col">Nome</th>
@@ -47,13 +47,15 @@
 				
 			</table>
 		</div>
+		<div class="foot">
 		<span>Idade media do publico filtrado: </span><span th:text="${idades}"></span><br>
 		<span>Produtos mais adquiridos pelo publico filtrado: <span/><span th:text="${servicoMaisPedido}"></span>
-		<div class="leftScreenPhoto">
-			<a th:href="@{/listar-clientes-nome}" ><span>Filtrar por nome</span></a>
-			<a th:href="@{/listar-clientes}" ><span>Todos os clientes</span></a>
-			<a th:href="@{/listar-clientes-masculinos}" ><span>Filtrar por clientes Masculinos</span></a>
+		<div class="filtros">
+			<a id="espaco" th:href="@{/listar-clientes-nome}" ><span>Filtrar por nome</span></a>
+			<a id="espaco" th:href="@{/listar-clientes}" ><span>Todos os clientes</span></a>
+			<a id="espaco" th:href="@{/listar-clientes-masculinos}" ><span>Filtrar por clientes Masculinos</span></a>
 			<a th:href="@{/listar-clientes-femininos}" ><span>Filtrar por clientes Femininos</span></a>
+		</div>
 		</div>
 	</div>
 

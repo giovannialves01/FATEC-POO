@@ -21,8 +21,6 @@ public class Cliente {
 	private String dataNasc;
 	@Column(nullable = false)
 	private String genero;
-	@Column(nullable = false)
-	private String foto;
 	@Column()
 	private Long numPes = 0L;
 	@Column()
@@ -71,14 +69,6 @@ public class Cliente {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public String getFoto() {
-		return foto;
-	}
-
-	public void setFoto(String foto) {
-		this.foto = foto;
 	}
 
 	public String getNome() {

@@ -30,7 +30,7 @@ button:hover{
     display: flex;
 }
 
-input{
+#inp{
     margin: 45px 30px 20px 70px;
 }
 .leftScreenPhoto{
@@ -45,4 +45,26 @@ p{
 }
 #anexarFoto{
     margin-left:55px;
+}
+#esp{
+	margin-left: 71px;
+	margin-bottom: 55px;
+}
+#diminui{
+	margin-left: 71px;
+}
+#sel{
+	margin: 25px 0 25px 71px;
+}
+#cliente-numPes{
+	width: 38px;
+}
+#cliente-numMaos{
+	width: 38px;
+}
+#cliente-numSobrancelhas{
+	width: 38px;
+}
+#cliente-numCabelos{
+	width: 38px;
 }

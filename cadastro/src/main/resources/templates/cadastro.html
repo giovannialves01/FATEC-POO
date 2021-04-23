@@ -12,27 +12,20 @@
 	<div class="full-screen">
 		<div class="rightScreenInputs">
 			<a th:href="@{/}" ><span>Home</span></a>
-			<form th:action="@{/cadastrar-clientes}" method="POST" >
-				<input required="required" placeholder="Nome" name="nome"/><br>
-				<input required="required" type="text" placeholder="telefone" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"/><br>
-				<input required="required" placeholder="Data Nascimento" name="dataNasc" id="nasc"maxlength="10" onkeypress="mascaraData(this)"/><br>
-				<select name="genero">
+			<form th:action="@{/cadastrar-clientes}" method="POST">
+				<input required="required" placeholder="Nome" name="nome" id="inp"/><br>
+				<input required="required" type="text" placeholder="telefone" name="telefone" id="inp" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"/><br>
+				<input required="required" placeholder="Data Nascimento" name="dataNasc" id="inp" maxlength="10" onkeypress="mascaraData(this)"/><br>
+				<select id="esp" name="genero">
 					<option>Masculino</option>
   					<option>Feminino</option>
 				</select><br>
-				<!-- <span th:text="${cliente.numPe}"></span><button type="button" th:onclick="${QuantidadePedidosController.aumentarQuantidadePedidosFeitos}"></button> -->
-				<input type="file" name="foto" accept="image/png, image/jpeg" />
 				<button id="botaoCadastro" type="submit">Cadastrar Cliente</button><br>
 			</form>
 		<a th:href="@{/listar-clientes}" ><span>Listar Clientes</span></a>
 		</div>
-		<div class="leftScreenPhoto">
-			<p>aqui vai o iputa da foto</p>
-    
-
-		    
-</form>
-		</div>
+		    		
+		
 	</div>
 
 	<script type="text/javascript" th:src="@{/js/script.js}"></script>	
